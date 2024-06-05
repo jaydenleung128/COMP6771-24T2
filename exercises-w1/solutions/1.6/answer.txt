@@ -1,0 +1,46 @@
+Do any of the following have errors? If so, what are they?
+
+1.
+```cpp
+auto i = 3;
+i = 4;
+```
+Answers: D
+
+Explanations: 
+No issue
+
+2.
+```cpp
+auto const j = 5;
+--j;
+```
+
+Answers: A
+
+Explanations: 
+ERROR: j is an constant integer which cannot be modified.
+
+3.
+```cpp
+auto age = 18;
+auto& my_age = age;
+++myAge;
+```
+
+Answers: A
+
+Explanations: 
+No issue for C++11 or higer version, will not compile in c++98 since 'auto' doesn't exist
+
+4.
+```cpp
+auto age = 21;
+auto const& my_age = age;
+--my_age;
+```
+
+Answers: D
+
+Explanations: 
+`my_age` is a reference to `int const`, which cannot be modified.
