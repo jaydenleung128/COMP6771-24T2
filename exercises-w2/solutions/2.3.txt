@@ -1,0 +1,7 @@
+1. Answer: (c). Functions defined in source files are by default globally visible (even without including a header file) due to backwards compatibility with C. So, there are two definitions of rand(), which is a link-time error.
+
+2. Answer: (b). Macros (such as #define) are copied-and-pasted during the preprocessing phase of compilation and so int N = constants::N; becomes int 6771 = constants::6771;, which is an illegal identifier. Thus, this is the first error to halt compilation.
+
+3. Answer: (b). Programs that use uninitialised variables are ill-formed and exhibit undefined behaviour (this is also true in C). Though (d) is also a potential error, use of i is concretely a logic error.
+
+4. Answer: (b). Like how malloc() returns nullptr if it fails, new will throw an exception, so the programmer needs to write code that can handle that (though most don't). (a) seems plausible, but main()'s return value being clamped is a convention rather than a hard rule.

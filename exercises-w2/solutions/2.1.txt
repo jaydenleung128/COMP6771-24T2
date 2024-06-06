@@ -1,0 +1,9 @@
+1. Answer: (a) This is a declaration only since the type and name of a function are known but the body has not yet been defined.
+
+2. Answer: (d). This is both since it is a global variable definition, and every definition is also a declaration.
+
+3. Answer: (d). This is both since it is a stack-local variable definition, and every definition is also a declaration.
+
+4. Answer: (c). This will output age and std::endl to the standard output stream and is neither a declaration nor definition.
+
+5. Answer: (d). It is both since it is a function definition and every definition is also a declaration.

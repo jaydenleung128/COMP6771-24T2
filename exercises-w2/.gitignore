@@ -31,4 +31,9 @@
 *.out
 *.app
 
-*.idx
+# Directories
+build*/*
+.vscode/ipch/*
+.clangd/*
+vcpkg/*
+.DS_Store

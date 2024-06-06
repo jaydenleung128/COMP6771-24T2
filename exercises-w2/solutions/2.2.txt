@@ -1,0 +1,9 @@
+1. Answer: (a). A character literal has type char. This cannot bind to char& (overload 4 is not viable) and will not bind to an int without a cast (overload 2 is not viable). For the purposes of overload resolution, const char and char are identical, so both overload 1 and 3 are viable. The reason in alternative (c) is not valid, therefore only alternative (a) can be chosen.
+
+2. Answer: (d). A variable of type c binds equally well to overload 1 and overload 2, so the call is ambiguous.
+
+3. Answer: (c). As the alternative states, overload 1 matches the first two arguments perfectly and the compiler has a default value for the 3rd argument, so it is selected.
+
+4. Answer: (b). The parameter of fn is a red-herring -- even though buf is int[3], this automatically decays to int *, and so the only overload that accepts an int * in min is overload 2.
+
+5. Answer: (b). By definition, C-style variadic functions have the lowest priority in overload resolution, so if the compiler can choose something more specific, it will. Thus, only overload 2 will be chosen.
